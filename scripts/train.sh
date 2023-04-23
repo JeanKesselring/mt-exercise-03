@@ -15,12 +15,16 @@ device=""
 SECONDS=0
 
 (cd $tools/pytorch-examples/word_language_model &&
-    CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads python main.py --data $data/seinfeld \
+    CUDA_VISIBLE_DEVICES=$device OMP_NUM_THREADS=$num_threads sudo python3 main.py --data $data/seinfeld \
         --epochs 40 \
         --log-interval 100 \
         --emsize 200 --nhid 200 --dropout 0.5 --tied \
-        --save $models/model.pt
+        --save $models/model.pt \
+        --dry-run\
+        --cuda
 )
+
+
 
 echo "time taken:"
 echo "$SECONDS seconds"

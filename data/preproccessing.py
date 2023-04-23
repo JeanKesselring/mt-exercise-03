@@ -5,10 +5,12 @@ from random import shuffle
 
 def process(file):
     with open(file, "r")as data:
+        VOCAB_SIZE = 5000
+
         data = data.read().lower()
         tokenized = word_tokenize(data)
         fdist = FreqDist(tokenized)
-        words = fdist.most_common(5000)
+        words = fdist.most_common(VOCAB_SIZE)
         words = [w[0] for w in words]
         vocab = Vocabulary(words, unk_cutoff=1)
 
@@ -39,5 +41,6 @@ def split_data(filename):
 
 if __name__ == "__main__":
     filename = "data.txt"
-    #process(filename)
+    process(filename)
     split_data("processed_data.txt")
+    # print('great success!')

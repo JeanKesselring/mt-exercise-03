@@ -1,0 +1,1 @@
+/mnt/c/Users/mhess/Documents/UZH/semester_4/Ricos_Machine_Translation💕/Exercises/mt-2023-ex03/mt_ex03_v-jean/mt-exercise-03/tools/pytorch-examples/word_language_model/data/wikitext-2/train.txt
