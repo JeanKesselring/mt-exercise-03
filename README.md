@@ -42,7 +42,7 @@ Train a model:
 
     ./scripts/train.sh
 
-(if on a device **without** CUDA, disable that in the train.sh file. the `sudo` command in line 18 is necessary for users running on WSL2, since it reaches across filesystems)
+(if on a device **without** CUDA, disable that in the train.sh file. And when working with CUDA, make sure to assign the graphics card of your choice to the `device`-variable in the training script.)
 
 The training process can be interrupted at any time, and the best checkpoint will always be saved.
 
